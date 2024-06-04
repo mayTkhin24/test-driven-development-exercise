@@ -52,5 +52,8 @@ def add(s: str) -> str:
     --------
         >>> add("1,2")
         '3'
+        >>> add("1,2,3")
+        '6'
+        >>>
     """
     pass  # TODO: Implement the function logic.
