@@ -23,3 +23,12 @@ def test_basic_add():
 
 def test_zero_case():
     assert add("") == "0" , "Failed on empty string"
+
+def test_malformed_input():
+    assert add("1,a") == "Error: Input string is malformed or contains invalid characters.", "Failed on malformed input '1,a'"
+    assert add("1,2,b") == "Error: Input string is malformed or contains invalid characters.", "Failed on malformed input '1,2,b'"
+
+def test_non_numeric_input():
+    assert add("one,two,three") == "Error: Input string is malformed or contains invalid characters.", "Failed on non-numeric input 'one,two,three'"
+
+
