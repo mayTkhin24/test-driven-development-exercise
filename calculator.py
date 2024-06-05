@@ -56,10 +56,12 @@ def add(s: str) -> str:
         '6'
         >>>
     """
-    spitted_string = string.split(",")
-    sum = 0
-    for elem in spitted_string: 
-        num = int(elem)
-        sum += num
-    
-    return str(sum) # TODO: Implement the function logic.
+    if s != "":
+        spitted_string = string.split(",")
+        sum = 0
+        for elem in spitted_string: 
+            num = int(elem)
+            sum += num
+        return str(sum) # TODO: Implement the function logic.
+    else:
+        return "0"
