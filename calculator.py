@@ -58,6 +58,7 @@ def add(s: str) -> str:
         '6'
         >>>
     """
+
     if s == "":
         return "0"
     
