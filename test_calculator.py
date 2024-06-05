@@ -31,4 +31,23 @@ def test_malformed_input():
 def test_non_numeric_input():
     assert add("one,two,three") == "Error: Input string is malformed or contains invalid characters.", "Failed on non-numeric input 'one,two,three'"
 
+def test_only_delimiters():
+    """
+    Tests addition with input strings that contain only delimiters.
+    """
+    assert add(",") == "Error: Input string is malformed or contains invalid characters.", "Failed on only delimiters ','"
+    assert add(",,,") == "Error: Input string is malformed or contains invalid characters.", "Failed on only delimiters ',,,'"
 
+def test_hyphen_as_separator():
+    """
+    Tests addition with hyphen as a separator.
+    """
+    assert add("1-2-3") == "6", "Failed on hyphen separator '1-2-3'"
+    assert add("1,2-3") == "6", "Failed on mixed separators '1,2-3'"
+
+def test_single_number():
+    """
+    Tests addition with a single number.
+    """
+    assert add("5") == "5", "Failed on single number '5'"
+    assert add("-5") == "-5", "Failed on single negative number '-5'"

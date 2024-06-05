@@ -63,6 +63,8 @@ def add(s: str) -> str:
         return "0"
     
     try:
+        # Replace hyphens with commas to unify the delimiter
+        s = s.replace("-", ",")
         splitted_string = s.split(",")
         total = 0
         for elem in splitted_string:
