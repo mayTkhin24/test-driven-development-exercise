@@ -56,4 +56,10 @@ def add(s: str) -> str:
         '6'
         >>>
     """
-    return "7"  # TODO: Implement the function logic.
+    spitted_string = string.split(",")
+    sum = 0
+    for elem in spitted_string: 
+        num = int(elem)
+        sum += num
+    
+    return str(sum) # TODO: Implement the function logic.
