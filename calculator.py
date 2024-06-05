@@ -58,10 +58,13 @@ def add(s: str) -> str:
         '6'
         >>>
     """
-    spitted_string = string.split(",")
-    sum = 0
-    for elem in spitted_string: 
-        num = int(elem)
-        sum += num
-    
-    return str(sum) # TODO: Implement the function logic.
+    try:
+        splitted_string = s.split(",")
+        total = 0
+        for elem in splitted_string:
+            total += int(elem)
+        return str(total)
+    except ValueError:
+        return "Error: Input string is malformed or contains invalid characters."
+    except Exception as e:
+        return f"Error: {str(e)}"
