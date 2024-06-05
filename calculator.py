@@ -58,6 +58,10 @@ def add(s: str) -> str:
         '6'
         >>>
     """
+
+    if s == "":
+        return "0"
+    
     try:
         splitted_string = s.split(",")
         total = 0
